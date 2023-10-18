@@ -19,8 +19,9 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=devsecopsgithubactionsnodejsproject
-          -Dsonar.projectKey=devsecopsganodejsprojectkey
+          -Dsonar.host.url=https://sonarqube.dev01.actlabinnovationdev.digitalcloudplatform.com/sonarqube
+          -Dsonar.projectKey=absui_genx
+          -Dsonar.login=$SONAR_TOKEN
   security:
     runs-on: ubuntu-latest
     needs: build
